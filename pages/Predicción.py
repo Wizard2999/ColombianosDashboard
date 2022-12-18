@@ -75,7 +75,7 @@ request_data = [
     }
 ]
 
-url_api="http://127.0.0.1:8000/predict"
+url_api="http://3.214.66.50:8000/predict"
 data = str(request_data).replace("'", '"')
 prediccion = requests.post(url=url_api, data=request_data).text
 st.metric(value=pd.read_json(prediccion)["detail"][0] ,label="sdfsd")
